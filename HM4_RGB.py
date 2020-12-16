@@ -9,6 +9,7 @@ Find the minimal total cost required to perform the work.
 Input Format
 First line of input contains a single integer n — the number of houses. Each of the following n lines contains three integers Ri, Gi and Bi each.
 """
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 def minCost(costs):
     for i in range(1,len(costs)):
         x = costs[i]
@@ -22,6 +23,8 @@ def minCost(costs):
 
 n = int(input())
 minTotalCost = 0
-costs = [list(map(int,input().strip().split())) for i in range(n)]
+costs = []
+for i in range(n):
+    costs.append(list(map(int,input().strip().split())))
 minTotalCost += (minCost(costs))
 print (minTotalCost)
